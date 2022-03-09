@@ -2,6 +2,8 @@ let http = require('http');
 let url = require('url');
 let fs = require('fs');
 
+const PORT = process.env.PORT || 5000;
+
 http.createServer((request, response) => {
 
 	var q = url.parse(request.url, true);
@@ -33,6 +35,6 @@ http.createServer((request, response) => {
 
 	
 
-}).listen(3000);
+}).listen(PORT);
 
-console.log("Serevr listening aon Port 3000");
+console.log("Serevr listening aon Port "+PORT);
